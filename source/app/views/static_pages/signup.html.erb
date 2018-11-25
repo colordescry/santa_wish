@@ -1,0 +1,24 @@
+<h1>Sign Up</h1>
+
+<div class="row">
+  <%= form_for(@parent) do |f| %>
+    Parent Account Name:<br />
+    <%= f.text_field :user %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= fields_for :children do |u| %>
+      <br />Child Account Name: 
+      <%= u.text_field :user %>
+      <%= u.label :password %>
+      <%= u.password_field :password %>
+      <%= u.hidden_field :user_id, :value => Parent.maximum(:id).next %>
+    <% end %>
+
+
+
+    <br />
+    <%= f.submit "Create an account" %>
+  <% end %>
+</div>
