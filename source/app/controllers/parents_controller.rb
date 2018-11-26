@@ -10,6 +10,8 @@ class ParentsController < ApplicationController
   # GET /parents/1
   # GET /parents/1.json
   def show
+    @parent = Parent.find(params[:id])
+    @child = Child.where(parent_id: @parent.id)
   end
 
   # GET /parents/new
@@ -19,6 +21,7 @@ class ParentsController < ApplicationController
 
   # GET /parents/1/edit
   def edit
+    @parent = Parent.find(params[:id])
   end
 
   # POST /parents
