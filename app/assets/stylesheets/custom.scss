@@ -1,0 +1,165 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$xmas-red:  #B3000C;
+$xmas-green:  #135113;
+
+body {
+  padding-top: 60px;
+  color: white;
+  background-image: url(christmas-christmas-wallpaper-gifts-23074.jpg);
+  background-size: cover;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+
+  margin-bottom: 10px;
+}
+
+.jumbotron
+{
+  
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(179, 0, 12, 0.6);
+  
+  
+}
+
+.jumbotron h1
+{
+  color: $xmas-green;
+  font-weight: bold;
+  text-shadow:2px 1px 0px rgba(179, 0, 12, 0.8);
+}
+
+a
+{
+  
+  color: blue;
+} 
+ a:link
+      {
+        text-decoration: none;
+      }
+
+
+h1
+{
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow:2px 4px 3px rgba(0, 0, 0, 0.3);
+  
+}
+
+//.first
+    
+
+h2
+{
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  text-shadow:2px 4px 3px rgba(0,0,0,0.3);
+  
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color:rgba(179, 0, 12, 0.8);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+   
+  padding-top: 14px;
+  font-weight: bold;
+  
+}
+
+#logo:hover {
+  color: white ;
+  text-decoration: none;
+  background-color: $xmas-green;
+}
+
+footer {
+  margin-top: 175px;
+  padding-top: 5px;
+  border-top: 2px solid #eaeaea;
+  color: #777;
+  a {
+    color: #555; 
+    text-decoration: none;
+    hover {
+          color: $xmas-red;
+          
+          }
+  }
+  small {
+          float: left;
+  }
+  ul { 
+      float: right;
+      list-style: none;
+      li {
+          float: left;
+          margin-left: 15px;
+          }
+    
+  }
+}  
+  
+.navbar-nav
+{
+  background-color: $xmas-green;
+  
+}
+
+.navbar
+{
+  background-color: $xmas-green;
+  border-color: $xmas-red;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color:rgba(179, 0, 12, 0.8);
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: .5px;
+    text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+    &:hover {
+          color: white;
+          
+          }
+}
+
+.btn.btn-lg.btn-success
+{
+  background-color: $xmas-green;
+  border-color: black;
+  color: white;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+  &:hover
+        {
+          background-color: #DAA520;
+          
+        }
+}
