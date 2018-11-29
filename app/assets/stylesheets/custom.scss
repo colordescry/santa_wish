@@ -3,6 +3,25 @@
 $xmas-red:  #B3000C;
 $xmas-green:  #135113;
 
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
 body {
   padding-top: 60px;
   color: white;
@@ -58,11 +77,15 @@ a
 
 h1
 {
-  font-size: 3em;
+  font-size: 5em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
   text-shadow:2px 4px 3px rgba(0, 0, 0, 0.3);
+  color: $xmas-green;
+  font-weight: bold;
+  
+  
   
 }
 
@@ -162,4 +185,32 @@ footer {
           background-color: #DAA520;
           
         }
+}
+
+.btn.btn-success
+{
+  
+  background-color: $xmas-green;
+  border-color: black;
+  color: white;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+  &:hover
+        {
+          background-color: #DAA520;
+          
+        }
+  
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 50%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }
