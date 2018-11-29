@@ -1,7 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$xmas-red:  #B3000C;
-$xmas-green:  #135113;
+$xmas-red:   #B3000C;
+$xmas-green: #034f20;
+$xmas-white: #fffaf0;
 
 $gray-medium-light: #eaeaea;
 
@@ -24,7 +25,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
-  color: white;
+  color: $xmas-white;
   background-image: url(christmas-christmas-wallpaper-gifts-23074.jpg);
   background-size: cover;
 }
@@ -99,7 +100,7 @@ h2
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: white;
+  color: $xmas-white;
   text-shadow:2px 4px 3px rgba(0,0,0,0.3);
   
 }
@@ -111,14 +112,14 @@ h2
   color:rgba(179, 0, 12, 0.8);
   text-transform: uppercase;
   letter-spacing: -1px;
-   
+  text-shadow:1px 0px 0px rgba(43,112,40,0.8); 
   padding-top: 14px;
   font-weight: bold;
   
 }
 
 #logo:hover {
-  color: white ;
+  color: $xmas-white ;
   text-decoration: none;
   background-color: $xmas-green;
 }
@@ -167,9 +168,9 @@ footer {
     font-weight: bold;
     font-size: 1.2em;
     letter-spacing: .5px;
-    text-shadow:1px 1px 0px rgba(0,0,0,0.2);
+    text-shadow:1px 0px 0px rgba(43,112,40,0.8);
     &:hover {
-          color: white;
+          color: $xmas-white;
           
           }
 }
@@ -178,7 +179,7 @@ footer {
 {
   background-color: $xmas-green;
   border-color: black;
-  color: white;
+  color: $xmas-white;
   text-shadow:1px 1px 0px rgba(0,0,0,0.2);
   &:hover
         {
@@ -192,7 +193,7 @@ footer {
   
   background-color: $xmas-green;
   border-color: black;
-  color: white;
+  color: $xmas-white;
   text-shadow:1px 1px 0px rgba(0,0,0,0.2);
   &:hover
         {
@@ -216,7 +217,7 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
-  background-color: #fffaf0;
+  background-color: $xmas-white;
 }
 
 label
