@@ -1,0 +1,18 @@
+<h1>Sign In</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign In", class: "btn btn-success" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Create Account Here!", signup_path, id: "login" %></p>
+  </div>
+</div>

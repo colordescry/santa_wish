@@ -105,6 +105,26 @@ h2
   
 }
 
+#login
+{
+  
+  color: $xmas-green;
+}
+
+#login:hover
+{
+  background-color: rgba(179, 0, 12, 0.0);
+  color: #DAA520;
+  
+}
+
+p
+{
+  margin-left: 25%;
+  color: $xmas-red;
+  text-shadow:1px 0px 0px rgba(43,112,40,0.8); 
+}
+
 #logo {
   float: left;
   margin-right: 10px;

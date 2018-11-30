@@ -28,8 +28,11 @@ class ParentsController < ApplicationController
 
     respond_to do |format|
       if @parent.save
+        login_in @parent
+        #welcome flash can go here
         format.html { redirect_to @parent, notice: 'Parent was successfully created.' }
         format.json { render :show, status: :created, location: @parent }
+        #parent save redirect goes here
       else
         format.html { render :new }
         format.json { render json: @parent.errors, status: :unprocessable_entity }
