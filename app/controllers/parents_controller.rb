@@ -31,7 +31,7 @@ class ParentsController < ApplicationController
 
     respond_to do |format|
       if @parent.save
-        # login_in @parent
+        login_in @parent
         #welcome flash can go here
         format.html { redirect_to @parent, notice: 'Parent was successfully created.' }
         format.json { render :show, status: :created, location: @parent }

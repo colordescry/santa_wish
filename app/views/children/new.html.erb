@@ -1,4 +1,4 @@
-<h1>New Child</h1>
+
 
 <h1>Create a Child</h1>
 
@@ -10,7 +10,7 @@
 
       <%= f.hidden_field :parent_id, value: session[:parent_id] %>
 
-      <%= f.submit "Create child account", class: "btn btn-primary" %>
+      <%= f.submit "Create Your Child Profile",current_parent, class: "btn btn-success" %>
     <% end %>
   </div>
 </div>
