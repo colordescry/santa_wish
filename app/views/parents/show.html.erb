@@ -1,14 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @parent.name %>
-</p>
+<div class="container-fluid">
+  <h1>Welcome <%= @parent.name %></h1>
+</div>
 
-<p>
-  <strong>Password:</strong>
-  <%= @parent.password %>
-</p>
+<div class="container-fluid">
+  <strong><center> Linked Child Account </center></strong>
+</div>
 
-<%= link_to 'Edit', edit_parent_path(@parent) %> |
-<%= link_to 'Back', parents_path %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Account Name</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @child.each do |i| %>
+        <tr>
+          <td><%= i.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <%= button_to "Create a new child account", new_child_path, 
+                                              class: "btn btn-primary" %>
+</div>

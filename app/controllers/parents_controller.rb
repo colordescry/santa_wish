@@ -10,6 +10,9 @@ class ParentsController < ApplicationController
   # GET /parents/1
   # GET /parents/1.json
   def show
+    @parent = Parent.find(params[:id])
+    @child = Child.where(parent_id: @parent.id)
+    session[:parent_id] = @parent.id
   end
 
   # GET /parents/new
@@ -28,7 +31,7 @@ class ParentsController < ApplicationController
 
     respond_to do |format|
       if @parent.save
-        login_in @parent
+        # login_in @parent
         #welcome flash can go here
         format.html { redirect_to @parent, notice: 'Parent was successfully created.' }
         format.json { render :show, status: :created, location: @parent }
