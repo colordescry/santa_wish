@@ -13,13 +13,14 @@
     <thead>
       <tr>
         <th>Account Name</th>
-        <th>Password</th>
+        <th>Wishlist</th>
       </tr>
     </thead>
     <tbody>
-      <% @child.each do |i| %>
+      <% @child.each do |c| %>
         <tr>
-          <td><%= i.name %></td>
+          <td><%= c.name %></td>
+          <td><%= link_to "show", "/children/#{c.id}" %></td>
         </tr>
       <% end %>
     </tbody>

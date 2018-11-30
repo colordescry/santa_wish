@@ -1,16 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Create a Child</h1>
+<h1>Welcome <%= @child.name %>!</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @child.name %>
-</p>
+<div class="container-fluid">
+  <strong><center>Wishlist</center></strong>
+</div>
 
-<p>
-  <strong>Parent:</strong>
-  <%= @child.parent_id %>
-</p>
+<!-- textbox and add for ajax call here -->
+<div class="container">
 
-<%= link_to 'Edit', edit_child_path(@child) %> |
-<%= link_to 'Back', children_path %>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Toy Name</th>
+        <th>Delete?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @wishlist.each do |w| %>
+        <tr>
+          <td><%= w.name %></td>
+          <td>ajax delete here</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

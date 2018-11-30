@@ -10,6 +10,9 @@ class ChildrenController < ApplicationController
   # GET /children/1
   # GET /children/1.json
   def show
+    @child = Child.find(params[:id])
+    @wishlist = Wishlist.where(child_id: @child.id)
+    session[:current_child_id] = @child.id
   end
 
   # GET /children/new

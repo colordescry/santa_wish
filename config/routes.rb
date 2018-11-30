@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wishlists
   root 'static_pages#home'
   get 'sessions/new'
   get    '/signup', to: 'parents#new'
