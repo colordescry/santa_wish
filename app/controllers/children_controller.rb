@@ -10,6 +10,8 @@ class ChildrenController < ApplicationController
   # GET /children/1
   # GET /children/1.json
   def show
+    #redirect_to current_parent 
+    
   end
 
   # GET /children/new
@@ -28,6 +30,7 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if @child.save
+        
         format.html { redirect_to @child, notice: 'Child was successfully created.' }
         format.json { render :show, status: :created, location: @child }
       else

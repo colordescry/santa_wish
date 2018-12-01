@@ -1,15 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$xmas-red:   #B3000C;
+$xmas-red: #B3000C;
 $xmas-green: #034f20;
 $xmas-white: #fffaf0;
 
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+  box-sizing: border-box;
 }
 
 
@@ -30,11 +30,10 @@ body {
   background-size: cover;
 }
 
-.loginbody
-{
-  
+.loginbody {
+
   background-image: url(branches-cold-conifers-773594.jpg);
-  
+
 }
 
 section {
@@ -54,99 +53,90 @@ textarea {
   margin-bottom: 10px;
 }
 
-.jumbotron
-{
-  
+.jumbotron {
+
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(179, 0, 12, 0.6);
-  
-  
+
+
 }
 
-.jumbotron h1
-{
+.jumbotron h1 {
   color: $xmas-green;
   font-weight: bold;
-  text-shadow:2px 1px 0px rgba(179, 0, 12, 0.8);
+  text-shadow: 2px 1px 0px rgba(179, 0, 12, 0.8);
 }
 
-a
-{
-  
-  color: blue;
-} 
- a:link
-      {
-        text-decoration: none;
-      }
 
 
-h1
-{
+a:link {
+  text-decoration: none;
+}
+
+
+h1 {
   font-size: 5em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
   color: $xmas-green;
   font-weight: bold;
-  text-shadow:2px 1px 0px rgba(179, 0, 12, 0.8);
-  
-  
-  
+  text-shadow: 2px 1px 0px rgba(179, 0, 12, 0.8);
+
 }
 
-//.first
-    
+h1.parshow {
+  font-size: 4em;
+  font-weight: normal;
 
-h2
-{
+}
+
+
+h2 {
   font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: $xmas-white;
-  text-shadow:2px 4px 3px rgba(0,0,0,0.3);
-  
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
 }
 
-#login
-{
-  
+#login {
+
   color: $xmas-green;
 }
 
-#login:hover
-{
+#login:hover {
   background-color: rgba(179, 0, 12, 0.0);
   color: #DAA520;
-  
+
 }
 
-p
-{
+p {
   margin-left: 25%;
   color: $xmas-red;
-  text-shadow:1px 0px 0px rgba(43,112,40,0.8); 
+  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
 }
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color:rgba(179, 0, 12, 0.8);
+  color: rgba(179, 0, 12, 0.8);
   text-transform: uppercase;
   letter-spacing: -1px;
-  text-shadow:1px 0px 0px rgba(43,112,40,0.8); 
+  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
   padding-top: 14px;
   font-weight: bold;
-  
+
 }
 
 #logo:hover {
-  color: $xmas-white ;
+  color: $xmas-white;
   text-decoration: none;
   background-color: $xmas-green;
 }
@@ -157,89 +147,86 @@ footer {
   border-top: 2px solid #eaeaea;
   color: #777;
   a {
-    color: #555; 
+    color: #555;
     text-decoration: none;
     hover {
-          color: $xmas-red;
-          
-          }
+      color: $xmas-red;
+
+    }
   }
   small {
-          float: left;
+    float: left;
   }
-  ul { 
-      float: right;
-      list-style: none;
-      li {
-          float: left;
-          margin-left: 15px;
-          }
-    
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+
   }
-}  
-  
-.navbar-nav
-{
-  background-color: $xmas-green;
-  
 }
 
-.navbar
-{
+.navbar-nav {
+  background-color: $xmas-green;
+
+}
+
+.navbar {
   background-color: $xmas-green;
   border-color: $xmas-red;
 }
 
 .nav.navbar-nav.navbar-right li a {
-    color:rgba(179, 0, 12, 0.8);
-    font-weight: bold;
-    font-size: 1.2em;
-    letter-spacing: .5px;
-    text-shadow:1px 0px 0px rgba(43,112,40,0.8);
-    &:hover {
-          color: $xmas-white;
-          
-          }
+  color: rgba(179, 0, 12, 0.8);
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: .5px;
+  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+  &:hover {
+    color: $xmas-white;
+
+  }
 }
 
-.btn.btn-lg.btn-success
-{
+.btn.btn-lg.btn-success {
   background-color: $xmas-green;
   border-color: black;
   color: $xmas-white;
-  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
-  &:hover
-        {
-          background-color: #DAA520;
-          
-        }
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: #DAA520;
+
+  }
 }
 
-.btn.btn-success
-{
-  
+.btn.btn-success {
+
   background-color: $xmas-green;
   border-color: black;
   color: $xmas-white;
-  text-shadow:1px 1px 0px rgba(0,0,0,0.2);
-  &:hover
-        {
-          background-color: #DAA520;
-          
-        }
-  
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: #DAA520;
+
+  }
+
 }
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
   border: 1px solid $xmas-green;
   border-radius: 5px;
   width: 50%;
   margin-bottom: 15px;
   @include box_sizing;
   margin-left: 25%;
-  
+
 }
 
 input {
@@ -247,11 +234,62 @@ input {
   background-color: $xmas-white;
 }
 
-label
-{
+label {
   margin-left: 25%;
   letter-spacing: 1px;
   color: $xmas-red;
   text-shadow: 1px 1px 0px #000;
   font-size: 1.2em;
+}
+
+table {
+  background-color: rgba(255, 250, 240, 0.8);
+  border-radius: 20px;
+}
+
+thead {
+
+
+  color: $xmas-green;
+  font-size: 1.2em;
+  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+
+  th {
+    text-align: center;
+    border-style: hidden!important;
+
+  }
+
+}
+
+tbody {
+
+
+  color: $xmas-red;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  
+  td  {
+    text-align: center;
+    border-style: hidden!important;
+    
+  }
+}
+
+td a.tdlink{
+  
+  color: $xmas-red;
+  &:hover{
+    background-color: rgba(255, 250, 240, 0.0);
+    color: #DAA520;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+}
+
+p.show {
+  color: $xmas-green;
+  font-size: 1.2em;
+  font-weight: bold;
 }

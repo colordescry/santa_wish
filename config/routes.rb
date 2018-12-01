@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   get '/new_child', to: 'children#new'
   post '/new_child', to: 'children#new'
 
-
-
+  resources :parents 
   resources :children
-  resources :parents
+   
 end

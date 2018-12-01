@@ -1,32 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
-  <h1>Welcome <%= @parent.name %></h1>
-</div>
 
-<div class="container-fluid">
-  <strong><center> Linked Child Account </center></strong>
-</div>
+<h1 class="parshow">Welcome <%= @parent.name %></h1>
 
-<div class="container">
+
+
+<div class="col-md-6 col-md-offset-3">
   <table class="table">
     <thead>
       <tr>
-        <th>Account Name</th>
-        <th>Password</th>
+        <th>Your Children</th>
+        
       </tr>
     </thead>
     <tbody>
       <% @child.each do |i| %>
         <tr>
-          <td><%= i.name %></td>
+          
+          <td><%= link_to i.name, i, class: "tdlink" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <p class="show">Have More Children? <%= link_to "Add New Child ", new_child_path, class: "btn btn-success" %></p>
 </div>
 
-<div class="container">
-  <%= button_to "Create a new child account", new_child_path, 
-                                              class: "btn btn-primary" %>
-</div>
+
