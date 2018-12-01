@@ -1,0 +1,6 @@
+$('.delete_wishlist').bind('ajax:success',function() {
+  $(this).closest('tr').fadeOut();
+});
+
+$("#results").html(
+  "<%= escape_javascript(render("results")) %>");

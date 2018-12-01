@@ -1,31 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Welcome <%= @child.name %>!</h1>
-
-<div class="container-fluid">
   <strong><center>Wishlist</center></strong>
-</div>
-
-<!-- textbox and add for ajax call here -->
-<div class="container">
-
-</div>
 
 <div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Toy Name</th>
-        <th>Delete?</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @wishlist.each do |w| %>
-        <tr>
-          <td><%= w.name %></td>
-          <td>ajax delete here</td>
-        </tr>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= form_tag(child_search_path, remote: true, id: "search_wishlist") do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", name: nil %>
       <% end %>
-    </tbody>
-  </table>
+  </div>
+  <div class="row">
+    <%= render 'results' %>
+  </div>
 </div>
