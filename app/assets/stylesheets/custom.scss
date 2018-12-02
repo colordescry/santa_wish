@@ -14,9 +14,6 @@ $gray-medium-light: #eaeaea;
   box-sizing: border-box;
 }
 
-
-
-
 .debug_dump {
   clear: both;
   float: left;
@@ -25,12 +22,24 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
-body.kids{
-  background-image: url(branches-cold-conifers-773594.jpg);
+
+body.kids {
+  background-image: url(blur-child-christmas-1556679.1.jpg);
+  //background-position: -20px 75px;
+  background-repeat: no-repeat;
 }
 
-body.adults{
+body.adults {
   background-image: url(celebration-christmas-decoration-220098.jpg);
+  h1 {
+    color: $xmas-red;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.6);
+
+  }
+  p {
+    color: $xmas-white;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.6);
+  }
 }
 
 body {
@@ -98,9 +107,23 @@ h1 {
 }
 
 h1.parshow {
-  font-size: 4em;
+  font-size: 5em;
   font-weight: normal;
+  //font-family: 'Pangolin', cursive;
+  
+}
 
+h1.kidshow{
+  font-size: 5em;
+  font-weight: normal;
+  font-family: 'Schoolbell', cursive;
+  float: right;
+  color: $xmas-red;
+  text-shadow: 2px 1px 0px $xmas-green;
+}
+
+.containerkid{
+  margin-left: 450px;
 }
 
 
@@ -142,41 +165,19 @@ p {
   text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
   padding-top: 14px;
   font-weight: bold;
+  width: 60;
+  height: 40;
+
 
 }
 
 #logo:hover {
-  color: $xmas-white;
+  color: #DAA520;
   text-decoration: none;
   background-color: $xmas-green;
+  text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
 }
 
-footer {
-  margin-top: 175px;
-  padding-top: 5px;
-  border-top: 2px solid #eaeaea;
-  color: #777;
-  a {
-    color: #555;
-    text-decoration: none;
-    hover {
-      color: $xmas-red;
-
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-
-  }
-}
 
 .navbar-nav {
   background-color: $xmas-green;
@@ -195,8 +196,8 @@ footer {
   letter-spacing: .5px;
   text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
   &:hover {
-    color: $xmas-white;
-
+    color: #DAA520;
+    text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
   }
 }
 
@@ -278,25 +279,26 @@ tbody {
   color: $xmas-red;
   font-size: 1.1em;
   text-transform: uppercase;
-  
-  td  {
+
+  td {
     text-align: center;
     border-style: hidden!important;
-    
+
   }
 }
 
-td a.tdlink{
-  
+td a.tdlink {
+
   color: $xmas-red;
-  &:hover{
+  &:hover {
     background-color: rgba(255, 250, 240, 0.0);
     color: #DAA520;
     font-weight: bold;
     font-size: 1.2em;
+    text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
   }
-  
-  
+
+
 }
 
 p.show {
