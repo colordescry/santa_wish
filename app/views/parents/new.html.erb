@@ -7,13 +7,13 @@
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.text_field :name %>
 
       <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password %>
       
       <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create Account", class: "btn btn-success" %>
     <% end %>
