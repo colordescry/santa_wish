@@ -1,11 +1,12 @@
-<p id="notice"><%= notice %></p>
-<h1 class="parshow">Hi <%= @child.name %></h1>
+
+<h1 class="parshow"><i class="fas fa-gift"></i> Happy Holidays <%= @child.name %> <i class="fas fa-gift"></i></h1>
   
-  <strong><center>Wishlist</center></strong>
+  
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Add what present you want Santa to bring!</h2>
       <%= form_tag(child_search_path, remote: true, id: "search_wishlist") do %>
         <%= text_field_tag :search, params[:search] %>
         <%= submit_tag "Search", name: nil %>
