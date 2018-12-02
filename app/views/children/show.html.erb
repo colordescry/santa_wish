@@ -1,6 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hi <%= @child.name %></h1>
+<h1>Welcome <%= @child.name %>!</h1>
+  <strong><center>Wishlist</center></strong>
 
-
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <%= form_tag(child_search_path, remote: true, id: "search_wishlist") do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", name: nil %>
+      <% end %>
+  </div>
+  <div class="row">
+    <%= render 'results' %>
+  </div>
+</div>

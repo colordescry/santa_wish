@@ -1,0 +1,18 @@
+<table class="table col-sm-12">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Edit</th>
+      <th>Delete?</th>
+  </thead>
+  <tbody id="results">
+    <% @wishlist.each do |w| %>
+      <tr>
+        <td><%= w.name %></td>
+        <td>edit</td>
+        <td><%= link_to "delete", w, :method => :delete,
+                        :remote => true, :class => 'delete_wishlist' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
