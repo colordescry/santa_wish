@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 $xmas-red: #B3000C;
 $xmas-green: #034f20;
 $xmas-white: #fffaf0;
@@ -22,6 +24,8 @@ $gray-medium-light: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
+
+
 
 body {
   padding-top: 60px;
@@ -285,6 +289,7 @@ td a.tdlink{
     font-weight: bold;
     font-size: 1.2em;
   }
+  
   
 }
 
