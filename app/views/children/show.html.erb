@@ -8,7 +8,7 @@
       
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
-            <h2>Add what present you want Santa to bring!</h2>
+            <h2 class= "kidsh2">Add what present you want Santa to bring!</h2>
             <%= form_tag(child_search_path, remote: true, id: "search_wishlist") do %>
               <%= text_field_tag :search, params[:search] %>
               <%= submit_tag "Search", name: nil %>

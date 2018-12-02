@@ -122,6 +122,8 @@ h1.kidshow{
   text-shadow: 2px 1px 0px $xmas-green;
 }
 
+
+
 .containerkid{
   margin-left: 450px;
 }
@@ -136,6 +138,10 @@ h2 {
   color: $xmas-white;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 
+}
+
+h2.kidsh2{
+  text-shadow: 2px 1px 0px rgba(179, 0, 12, 0.8);
 }
 
 #login {
@@ -233,11 +239,13 @@ select,
 .uneditable-input {
   border: 1px solid $xmas-green;
   border-radius: 5px;
+  padding: 10px 20px;
   width: 50%;
+  font-size: 1.1em;
   margin-bottom: 15px;
   @include box_sizing;
   margin-left: 25%;
-
+  
 }
 
 input {
