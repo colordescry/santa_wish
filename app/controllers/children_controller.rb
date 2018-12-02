@@ -10,8 +10,9 @@ class ChildrenController < ApplicationController
   # GET /children/1
   # GET /children/1.json
   def show
-    #redirect_to current_parent 
-    
+    @child = Child.find(params[:id])
+    @wishlist = Wishlist.where(child_id: @child.id)
+    session[:current_child_id] = @child.id
   end
 
   # GET /children/new
@@ -61,6 +62,16 @@ class ChildrenController < ApplicationController
     respond_to do |format|
       format.html { redirect_to children_url, notice: 'Child was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def search
+    name = params[search] + '%'
+    id = session[:current_child_id]
+    @wishlist= Wishlist.where(['name LIKE ? AND child_id = ?', name, id])
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
