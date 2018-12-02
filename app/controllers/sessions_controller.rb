@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    parent = Parent.find_by(name: params[:session][:name])
+    parent = Parent.find_by(name: params[:session][:name].downcase)
     if parent && parent.authenticate(params[:session][:password])
       log_in parent
       redirect_to parent

@@ -3,7 +3,8 @@ class Parent < ApplicationRecord
   has_many :child
   validates :name, presence: true, length: { minimum: 8, maximum: 40 },
                    uniqueness: { case_sensitive: false }
+  has_secure_password
   validates :password, presence: true, length: { minimum: 8, maximum: 40 }
 
-  has_secure_password
+  #has_secure_password
 end
