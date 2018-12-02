@@ -25,7 +25,13 @@ $gray-medium-light: #eaeaea;
   @include box_sizing;
 }
 
+body.kids{
+  background-image: url(branches-cold-conifers-773594.jpg);
+}
 
+body.adults{
+  background-image: url(celebration-christmas-decoration-220098.jpg);
+}
 
 body {
   padding-top: 60px;
