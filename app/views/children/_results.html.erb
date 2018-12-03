@@ -1,17 +1,19 @@
-<table class="table col-sm-12">
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Edit</th>
-      <th>Delete?</th>
+      <th>Your Present</th>
+      
+      <th>Change Mind?</th>
+      
   </thead>
-  <tbody id="results">
+  <tbody>
     <% @wishlist.each do |w| %>
       <tr>
         <td><%= w.name %></td>
-        <td>edit</td>
+        
         <td><%= link_to "delete", w, :method => :delete,
-                        :remote => true, :class => 'delete_wishlist' %></td>
+                        :remote => true, :class => 'delete_wishlist',class: "tdlink2" %>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
       </tr>
     <% end %>
   </tbody>

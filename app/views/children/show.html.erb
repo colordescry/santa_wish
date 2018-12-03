@@ -1,4 +1,15 @@
 <body class="kids">
+<div class="winter-is-coming">
+  
+  <div class="snow snow--near"></div>
+  <div class="snow snow--near snow--alt"></div>
+  
+  <div class="snow snow--mid"></div>
+  <div class="snow snow--mid snow--alt"></div>
+  
+  <div class="snow snow--far"></div>
+  <div class="snow snow--far snow--alt"></div>
+</div>  
       <%= render 'layouts/header' %>
           <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
@@ -8,16 +19,22 @@
       
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
+            
             <h2 class= "kidsh2">Add what present you want Santa to bring!</h2>
-              <%= link_to "Add Present", new_wishlist_path, class: "btn btn-success" %>
+            <div class="move">
+            <%= link_to "Add Present", new_wishlist_path, class: "btn btn-lg btn-success" %>
+            </div> 
+            <%= render 'results' %>
+         
+         
           </div>
-        <div class="row">
-          <%= render 'results' %>
-        </div>
+        
+         
+        
         
         </div>
       
-      <%#= debug(params) if Rails.env.development? %>
+        <%#= debug(params) if Rails.env.development? %>
     
-  </body>
+</body>
 
