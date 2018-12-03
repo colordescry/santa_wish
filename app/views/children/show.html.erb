@@ -1,23 +1,40 @@
 <body class="kids">
+<div class="winter-is-coming">
+  
+  <div class="snow snow--near"></div>
+  <div class="snow snow--near snow--alt"></div>
+  
+  <div class="snow snow--mid"></div>
+  <div class="snow snow--mid snow--alt"></div>
+  
+  <div class="snow snow--far"></div>
+  <div class="snow snow--far snow--alt"></div>
+</div>  
       <%= render 'layouts/header' %>
           <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <h1 class="kidshow"><i class="fas fa-gift"></i> Happy Holidays <%= @child.name %> <i class="fas fa-gift"></i></h1>
+      <h1 class="kidshow"><i class="fas fa-tree"></i> Happy Holidays <%= @child.name %> <i class="fas fa-tree"></i></h1>
 
       
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
-            <h2 class= "kidsh2">Add what present you want Santa to bring!</h2>
-              <%= link_to "Add Present", new_wishlist_path, class: "btn btn-success" %>
+            
+            <h2 class= "kidsh2">Click the button to start adding presents to your list!</h2>
+            <div class="move">
+            <%= link_to "Add Present", new_wishlist_path, class: "btn btn-lg btn-success" %>
+            </div> 
+            <%= render 'results' %>
+         
+         
           </div>
-        <div class="row">
-          <%= render 'results' %>
-        </div>
+        
+         
+        
         
         </div>
       
-      <%#= debug(params) if Rails.env.development? %>
+        <%#= debug(params) if Rails.env.development? %>
     
-  </body>
+</body>
 

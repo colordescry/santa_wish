@@ -5,8 +5,9 @@
 $xmas-red: #B3000C;
 $xmas-green: #034f20;
 $xmas-white: #fffaf0;
-
 $gray-medium-light: #eaeaea;
+
+//images from pexel.com,free personal/commercial use//
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -25,8 +26,25 @@ $gray-medium-light: #eaeaea;
 
 body.kids {
   background-image: url(blur-child-christmas-1556679.1.jpg);
-  //background-position: -20px 75px;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat;
+  td{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.2em;
+  }
+  th{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.4em;
+  }
+}
+
+body.gifts{
+  background-image: url(christmas-cute-macro-40541.jpg);
+  label{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.4em;
+  }
+  
 }
 
 body.adults {
@@ -39,6 +57,11 @@ body.adults {
   p {
     color: $xmas-white;
     text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.6);
+  }
+  label{
+    color: $xmas-white;
+    font-size: 1.4em;
+    text-shadow: 2px 0px 0px $xmas-green;
   }
 }
 
@@ -122,6 +145,14 @@ h1.kidshow{
   text-shadow: 2px 1px 0px $xmas-green;
 }
 
+h1.kidshow2{
+  font-size: 5em;
+  font-weight: normal;
+  font-family: 'Schoolbell', cursive;
+  
+  color: $xmas-red;
+  text-shadow: 2px 1px 0px $xmas-green;
+}
 
 
 .containerkid{
@@ -142,6 +173,8 @@ h2 {
 
 h2.kidsh2{
   text-shadow: 2px 1px 0px rgba(179, 0, 12, 0.8);
+  font-family: 'Schoolbell', cursive;
+  font-size: 1.8em;
 }
 
 #login {
@@ -168,7 +201,7 @@ p {
   color: rgba(179, 0, 12, 0.8);
   text-transform: uppercase;
   letter-spacing: -1px;
-  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+  text-shadow: 1px 0px 0px black;
   padding-top: 14px;
   font-weight: bold;
   width: 60;
@@ -200,7 +233,7 @@ p {
   font-weight: bold;
   font-size: 1.2em;
   letter-spacing: .5px;
-  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+  text-shadow: 1px 0px 0px black;
   &:hover {
     color: #DAA520;
     text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
@@ -219,7 +252,7 @@ p {
 }
 
 .btn.btn-success {
-
+  
   background-color: $xmas-green;
   border-color: black;
   color: $xmas-white;
@@ -229,6 +262,17 @@ p {
 
   }
 
+}
+
+.move{
+  margin-left: 37%;
+  margin-bottom: 15px;
+  font-family: 'Schoolbell', cursive;
+}
+
+.kidfont{
+  font-family: 'Schoolbell', cursive;
+  font-size: 1.4em;
 }
 
 /* forms */
@@ -305,12 +349,96 @@ td a.tdlink {
     font-size: 1.2em;
     text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
   }
+}
 
+td a.tdlink2 {
 
+  color: $xmas-red;
+  &:hover {
+    background-color: rgba(255, 250, 240, 0.0);
+    color: #DAA520;
+    
+  }
 }
 
 p.show {
   color: $xmas-green;
   font-size: 1.2em;
   font-weight: bold;
+}
+//snow effects came from engageinteractive.co.uk/blog/5-modern-snow-effects//
+
+$c--background: rgba(51, 51, 51, 0.0);
+
+$s--near: 10s;
+$s--mid: ($s--near * 2);
+$s--far: ($s--near * 3);
+
+$ease--out-quad: cubic-bezier(.25,.46,.450,.94);
+
+
+%on-top {
+  z-index: 100;
+  pointer-events: none;
+}
+
+
+.winter-is-coming {
+  @extend %on-top;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background: $c--background;
+}
+
+
+.snow {
+  @extend %on-top;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  animation: falling linear infinite both;
+  transform: translate3D(0,-100%,0);
+    
+  &--near {
+    animation-duration: $s--near;
+    background-image: url('https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png');
+    background-size: contain;
+    
+    & + .snow--alt {
+      animation-delay: ($s--near / 2);
+    }
+  }
+    
+  &--mid {
+    animation-duration: $s--mid;
+    background-image: image-url('https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png');
+    background-size: contain;
+    
+    & + .snow--alt {
+      animation-delay: ($s--mid / 2);
+    }
+  }
+    
+  &--far {
+    animation-duration: $s--far;
+    background-image: image-url('https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png');
+    background-size: cover;
+    
+    & + .snow--alt {
+      animation-delay: ($s--far / 2);
+    }
+  }
+}
+      
+@keyframes falling {
+  0% {
+    transform: translate3D(-7.5%,-100%, 0);
+  }
+      
+  100% {
+    transform: translate3D(7.5%,100%, 0);
+  }  
 }
