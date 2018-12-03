@@ -28,11 +28,22 @@ body.kids {
   background-image: url(blur-child-christmas-1556679.1.jpg);
   background-size: cover;
   background-repeat: repeat;
-  
+  td{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.2em;
+  }
+  th{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.4em;
+  }
 }
 
 body.gifts{
   background-image: url(christmas-cute-macro-40541.jpg);
+  label{
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.4em;
+  }
   
 }
 
@@ -46,6 +57,11 @@ body.adults {
   p {
     color: $xmas-white;
     text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.6);
+  }
+  label{
+    color: $xmas-white;
+    font-size: 1.4em;
+    text-shadow: 2px 0px 0px $xmas-green;
   }
 }
 
