@@ -5,8 +5,9 @@
 $xmas-red: #B3000C;
 $xmas-green: #034f20;
 $xmas-white: #fffaf0;
-
 $gray-medium-light: #eaeaea;
+
+//images from pexel.com,free personal/commercial use//
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -182,7 +183,7 @@ p {
   color: rgba(179, 0, 12, 0.8);
   text-transform: uppercase;
   letter-spacing: -1px;
-  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+  text-shadow: 1px 0px 0px black;
   padding-top: 14px;
   font-weight: bold;
   width: 60;
@@ -214,7 +215,7 @@ p {
   font-weight: bold;
   font-size: 1.2em;
   letter-spacing: .5px;
-  text-shadow: 1px 0px 0px rgba(43, 112, 40, 0.8);
+  text-shadow: 1px 0px 0px black;
   &:hover {
     color: #DAA520;
     text-shadow: 1px 0px 0px rgba(179, 0, 12, 0.8);
