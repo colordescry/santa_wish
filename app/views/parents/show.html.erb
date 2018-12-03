@@ -13,13 +13,11 @@
         <thead>
           <tr>
             <th>Your Children</th>
-            
           </tr>
         </thead>
         <tbody>
           <% @child.each do |i| %>
             <tr>
-              
               <td><%= link_to i.name, i, class: "tdlink" %>
                 <i class="fas fa-child"></i></td>
             </tr>
