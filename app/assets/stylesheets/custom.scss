@@ -252,7 +252,7 @@ p {
 }
 
 .btn.btn-success {
-
+  
   background-color: $xmas-green;
   border-color: black;
   color: $xmas-white;
@@ -268,6 +268,11 @@ p {
   margin-left: 37%;
   margin-bottom: 15px;
   font-family: 'Schoolbell', cursive;
+}
+
+.kidfont{
+  font-family: 'Schoolbell', cursive;
+  font-size: 1.4em;
 }
 
 /* forms */
