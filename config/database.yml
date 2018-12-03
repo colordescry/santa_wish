@@ -22,6 +22,4 @@ test:
 
 production:
   <<: *default
-  database: cs416-f18-finalproject-final-project-group-14_production
-  username: cs416-f18-finalproject-final-project-group-14
-  password: <%= ENV['CS416-F18-FINALPROJECT-FINAL-PROJECT-GROUP-14_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
