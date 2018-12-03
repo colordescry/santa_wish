@@ -28,8 +28,10 @@ class WishlistsController < ApplicationController
 
     respond_to do |format|
       if @wishlist.save
-        format.html { redirect_to @wishlist, notice: 'Wishlist was successfully created.' }
-        format.json { render :show, status: :created, location: @wishlist }
+        format.html { redirect_to "/children/#{session[:current_child_id]}" }
+        #format.html { redirect_to children_path(id: 
+        #format.html { redirect_to @wishlist, notice: 'Wishlist was successfully created.' }
+        #format.json { render :show, status: :created, location: @wishlist }
       else
         format.html { render :new }
         format.json { render json: @wishlist.errors, status: :unprocessable_entity }
